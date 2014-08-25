@@ -1,4 +1,4 @@
-# Statusbot::Workers
+# Statusbot::Workers [![Build Status](https://travis-ci.org/ejhayes/statusbot-workers.png?branch=master)](https://travis-ci.org/ejhayes/statusbot-workers) [![Code Climate](https://codeclimate.com/github/ejhayes/statusbot-workers/badges/gpa.svg)](https://codeclimate.com/github/ejhayes/statusbot-workers) [![Test Coverage](https://codeclimate.com/github/ejhayes/statusbot-workers/badges/coverage.svg)](https://codeclimate.com/github/ejhayes/statusbot-workers) [![Dependency Status](https://gemnasium.com/ejhayes/statusbot-workers.svg)](https://gemnasium.com/ejhayes/statusbot-workers)
 
 Contains the worker processes used by statusbot.me.
 
