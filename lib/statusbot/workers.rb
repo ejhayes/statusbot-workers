@@ -25,5 +25,15 @@ module Statusbot
     def self.disconnect
       @@connected = false
     end
+
+    def self.create_runner(&block)
+      config = Config.new
+      block.call config
+
+      # validate before returning
+      config.validate!
+
+      Runner.new(config)
+    end
   end
 end

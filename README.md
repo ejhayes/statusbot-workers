@@ -30,6 +30,12 @@ To get the workers up and running simply run the worker binary installed with th
 
 NOTE: If this is runing in production mode, it would be best to keep the process alive with upstart, supervisor, god, or one of the many fine tools out there.
 
+## TODO
+
+- Configuration--validation should be using the observer pattern
+- Tests for the runner and configuration object
+- Usage of sucker_punch for job processing
+
 ## Contributing
 
 1. Fork it ( https://github.com/ejhayes/statusbot-workers/fork )

@@ -1,3 +1,28 @@
 #!/usr/bin/env ruby
 
 require 'statusbot/workers'
+require 'trollop'
+
+opts = Trollop::options do
+  version "#{$0} version #{Statusbot::Workers::VERSION}"
+  banner <<-EOS
+#{$0}: utility to run the workers for statusbot.me.
+Usage:
+        #{$0} [options]
+
+where [options] are zero or more of:
+EOS
+  opt :log, "output to logfile (default: STDOUT)", :type => :string
+  opt :debug, "enable debugging mode"
+  opt :environment, "the environment to use", :type => :string, :default => 'development'
+end
+
+# worker runner factory
+runner = Statusbot::Workers.create_runner do |config|
+  config.log = opts[:log]
+  config.environment = opts[:environment]
+  config.debug = opts[:debug]
+end
+
+# now run it
+runner.run
